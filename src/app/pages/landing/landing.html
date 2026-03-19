@@ -1,13 +1,30 @@
 <!-- ══════════════════════════════════════════════ -->
-<!--  Digiobra  ·  Landing Page                   -->
+<!--  Digiobra  ·  Landing Page  ·  Tech Edition   -->
 <!-- ══════════════════════════════════════════════ -->
 
 <!-- ── Navbar ─────────────────────────────────── -->
 <nav class="navbar" id="navbar">
   <div class="nav-container">
     <a class="nav-logo" href="#">
-      <span class="logo-icon">◆</span>
-      <span class="logo-text">Digi<span class="logo-accent">obra</span></span>
+      <svg class="logo-svg" width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="grad-top" x1="30" y1="5" x2="85" y2="55" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#f47920"/>
+            <stop offset="50%" stop-color="#e94560"/>
+            <stop offset="100%" stop-color="#c840a0"/>
+          </linearGradient>
+          <linearGradient id="grad-bottom" x1="70" y1="95" x2="15" y2="45" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#00d4ff"/>
+            <stop offset="50%" stop-color="#7c3aed"/>
+            <stop offset="100%" stop-color="#c840a0"/>
+          </linearGradient>
+        </defs>
+        <!-- Top-right arrow piece -->
+        <path d="M55 8 L85 28 L85 55 L60 42 L60 28 L42 18 Z" fill="url(#grad-top)"/>
+        <!-- Bottom-left arrow piece -->
+        <path d="M45 92 L15 72 L15 45 L40 58 L40 72 L58 82 Z" fill="url(#grad-bottom)"/>
+      </svg>
+      <span class="logo-text">Digi<span class="logo-accent">Obra</span></span>
     </a>
     <ul class="nav-links">
       <li><a href="#servicios">Servicios</a></li>
@@ -21,6 +38,7 @@
 <!-- ── Hero ───────────────────────────────────── -->
 <section class="hero" id="hero">
   <div class="hero-bg-overlay"></div>
+  <div class="hero-grid"></div>
   <div class="hero-particles">
     <span class="particle p1"></span>
     <span class="particle p2"></span>
@@ -28,9 +46,21 @@
     <span class="particle p4"></span>
     <span class="particle p5"></span>
     <span class="particle p6"></span>
+    <!-- Tech shapes -->
+    <span class="tech-shape ts1"></span>
+    <span class="tech-shape ts2"></span>
+    <span class="tech-shape ts3"></span>
   </div>
+  <!-- Glowing orbs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
   <div class="hero-content">
-    <span class="hero-badge">🚀 Transformación digital con propósito</span>
+    <span class="hero-badge">
+      <span class="badge-dot"></span>
+      Transformación digital con propósito
+    </span>
     <h1 class="hero-title">
       Tecnología con propósito para organizaciones que
       <span class="gradient-text">transforman realidades.</span>
@@ -83,6 +113,7 @@
     <div class="services-grid">
       <!-- Service 1 -->
       <div class="service-card" id="service-custom-dev">
+        <div class="card-glow"></div>
         <div class="service-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
@@ -104,6 +135,7 @@
 
       <!-- Service 2 -->
       <div class="service-card featured" id="service-social-gov">
+        <div class="card-glow"></div>
         <div class="service-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
@@ -126,6 +158,7 @@
 
       <!-- Service 3 -->
       <div class="service-card" id="service-pymes">
+        <div class="card-glow"></div>
         <div class="service-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -195,51 +228,110 @@
   </div>
 </section>
 
-<!-- ── A quiénes impulsamos ──────────────────── -->
+<!-- ── Clientes ───────────────────────────────── -->
 <section class="section clientes" id="clientes">
   <div class="section-container">
-    <span class="section-badge">A quiénes impulsamos</span>
+    <span class="section-badge">Confían en nosotros</span>
     <h2 class="section-title">
-      Adaptados a las necesidades de <span class="gradient-text">cada ecosistema</span>
+      Organizaciones que ya <span class="gradient-text">transforman su realidad</span>
     </h2>
     <p class="section-subtitle">
-      Nuestra experiencia nos permite adaptarnos a las necesidades de diferentes
-      ecosistemas en Colombia y la región: desde entidades gubernamentales y fundaciones,
-      hasta pequeñas empresas dando su primer salto digital.
+      Trabajamos con corporaciones, agencias, fundaciones y emprendimientos de
+      Colombia y la región. Cada proyecto nos reta a entregar más.
     </p>
 
-    <div class="clientes-grid">
-      <div class="cliente-card" id="cliente-gobierno">
-        <div class="cliente-icon">🏛️</div>
-        <h3>Instituciones Públicas</h3>
-        <p>Modernización, transparencia y cumplimiento de metas.</p>
-        <ul class="cliente-features">
-          <li>Sistemas de gestión interna</li>
-          <li>Plataformas de reporte</li>
-          <li>Cumplimiento normativo</li>
-        </ul>
+    <!-- Client logo wall -->
+    <div class="clients-wall">
+      <div class="client-logo-card" id="client-yraka">
+        <span class="client-name">Corporación YRAKA</span>
+        <span class="client-type">Sector Social</span>
       </div>
-
-      <div class="cliente-card" id="cliente-social">
-        <div class="cliente-icon">💚</div>
-        <h3>Sector Social</h3>
-        <p>Medición de impacto, gestión de donantes y articulación de comunidades.</p>
-        <ul class="cliente-features">
-          <li>Plataformas de impacto</li>
-          <li>Gestión de beneficiarios</li>
-          <li>Herramientas comunitarias</li>
-        </ul>
+      <div class="client-logo-card" id="client-experiencias">
+        <span class="client-name">Experiencias Pro</span>
+        <span class="client-type">Experiencias</span>
       </div>
+      <div class="client-logo-card" id="client-atenea">
+        <span class="client-name">Agencia Atenea</span>
+        <span class="client-type">Marketing</span>
+      </div>
+      <div class="client-logo-card" id="client-asodicat">
+        <span class="client-name">ASODICAT</span>
+        <span class="client-type">Asociación</span>
+      </div>
+      <div class="client-logo-card" id="client-gobierna">
+        <span class="client-name">Gobierna</span>
+        <span class="client-type">GovTech</span>
+      </div>
+      <div class="client-logo-card" id="client-lazos">
+        <span class="client-name">Lazos Sociales</span>
+        <span class="client-type">Impacto Social</span>
+      </div>
+      <div class="client-logo-card" id="client-pacific">
+        <span class="client-name">Pacific Building</span>
+        <span class="client-type">Construcción</span>
+      </div>
+      <div class="client-logo-card" id="client-testea">
+        <span class="client-name">Testea</span>
+        <span class="client-type">EdTech</span>
+      </div>
+    </div>
 
-      <div class="cliente-card" id="cliente-pymes">
-        <div class="cliente-icon">🚀</div>
-        <h3>Pymes y Emprendimientos</h3>
-        <p>Digitalización, validación en el mercado y escalabilidad controlada.</p>
-        <ul class="cliente-features">
-          <li>MVPs para validación</li>
-          <li>Automatización de procesos</li>
-          <li>Dashboards inteligentes</li>
-        </ul>
+    <!-- Infinite scrolling marquee -->
+    <div class="clients-marquee">
+      <div class="marquee-track">
+        <span class="marquee-item">Corporación YRAKA</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Experiencias Pro</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Agencia Atenea</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">ASODICAT</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Gobierna</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Lazos Sociales</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Pacific Building</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Testea</span>
+        <span class="marquee-dot"></span>
+        <!-- Duplicated for seamless loop -->
+        <span class="marquee-item">Corporación YRAKA</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Experiencias Pro</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Agencia Atenea</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">ASODICAT</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Gobierna</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Lazos Sociales</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Pacific Building</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-item">Testea</span>
+        <span class="marquee-dot"></span>
+      </div>
+    </div>
+
+    <!-- Ecosystem categories -->
+    <div class="ecosystems-row">
+      <div class="ecosystem-chip">
+        <span class="eco-icon">🏛️</span>
+        <span>Instituciones Públicas</span>
+      </div>
+      <div class="ecosystem-chip">
+        <span class="eco-icon">💚</span>
+        <span>Sector Social</span>
+      </div>
+      <div class="ecosystem-chip">
+        <span class="eco-icon">🚀</span>
+        <span>Pymes y Emprendimientos</span>
+      </div>
+      <div class="ecosystem-chip">
+        <span class="eco-icon">📱</span>
+        <span>EdTech &amp; SaaS</span>
       </div>
     </div>
   </div>
@@ -249,6 +341,7 @@
 <section class="section cta-section" id="contacto">
   <div class="section-container">
     <div class="cta-box">
+      <div class="cta-glow-line"></div>
       <h2 class="cta-title">¿Tienes un proyecto en mente?</h2>
       <p class="cta-text">
         Cuéntanos tu idea y te mostramos cómo la tecnología puede transformarla en realidad.
@@ -273,8 +366,23 @@
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-brand">
-      <span class="logo-icon">◆</span>
-      <span class="logo-text">Digi<span class="logo-accent">obra</span></span>
+      <svg class="logo-svg" width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="grad-top-f" x1="30" y1="5" x2="85" y2="55" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#f47920"/>
+            <stop offset="50%" stop-color="#e94560"/>
+            <stop offset="100%" stop-color="#c840a0"/>
+          </linearGradient>
+          <linearGradient id="grad-bottom-f" x1="70" y1="95" x2="15" y2="45" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#00d4ff"/>
+            <stop offset="50%" stop-color="#7c3aed"/>
+            <stop offset="100%" stop-color="#c840a0"/>
+          </linearGradient>
+        </defs>
+        <path d="M55 8 L85 28 L85 55 L60 42 L60 28 L42 18 Z" fill="url(#grad-top-f)"/>
+        <path d="M45 92 L15 72 L15 45 L40 58 L40 72 L58 82 Z" fill="url(#grad-bottom-f)"/>
+      </svg>
+      <span class="logo-text">Digi<span class="logo-accent">Obra</span></span>
       <p class="footer-tagline">Tecnología con propósito.</p>
     </div>
     <div class="footer-links">
@@ -283,6 +391,6 @@
       <a href="#clientes">Clientes</a>
       <a href="#contacto">Contacto</a>
     </div>
-    <p class="footer-copy">© 2026 Digiobra. Todos los derechos reservados.</p>
+    <p class="footer-copy">© 2026 DigiObra. Todos los derechos reservados.</p>
   </div>
 </footer>
